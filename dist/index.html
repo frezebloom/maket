@@ -91,55 +91,79 @@
                 </ul>
             </nav>
             <div class="content">
-                <div class="post">
-                    <div class="top">
-                        <h2>Заголовок поста</h2>
-                    </div>
-                    <div class="body">
-                        <p>
-                            представителей рода пантер, относящегося к подсемейству больших кошек в составе семейства
-                            кошачьих. Наряду с тигром — самая крупная из ныне живущих кошек, масса некоторых самцов
-                            может достигать 250 кг.
-                        </p>
-                    </div>
-                    <div class="bottom">
-                        <div class="author">
-                            Автор:
-                            <a href="/">Гедеван</a>
+                <!-- <div class="products_wrapper"> -->
+                <!-- <div class="products_catalog"> -->
+                <div class="products">
+                    <img class="products_img" src="../media/{{ product.pictures }}" alt="Изображение">
+                    <p class="products_title">
+                        <a href="{{ product.id }}/product">{{ product.name }}</a>
+                    </p>
+                    <div class="products_footer">
+                        <div class="products_price">
+                            {{ product.price }} ₽
                         </div>
-                        <a href="/">Комментарии</a>
+                        <div class="products_button">
+                            Купить
+                        </div>
                     </div>
                 </div>
-                <div class="post">
-                    <div class="top">
-                        <h2>Заголовок поста</h2>
-                    </div>
-                    <div class="body">
-                        <p>
-                            представителей рода пантер, относящегося к подсемейству больших кошек в составе семейства
-                            кошачьих. Наряду с тигром — самая крупная из ныне живущих кошек, масса некоторых самцов
-                            может достигать 250 кг.
-                        </p>
-                    </div>
-                    <div class="bottom">
-                        <div class="author">
-                            Автор:
-                            <a href="/">Гедеван</a>
+                {% endfor %}
+            </div>
+            <div class="content">
+                <!-- <div class="products_wrapper"> -->
+                <!-- <div class="products_catalog"> -->
+                <div class="products">
+                    <img class="products_img" src="../media/{{ product.pictures }}" alt="Изображение">
+                    <p class="products_title">
+                        <a href="{{ product.id }}/product">{{ product.name }}</a>
+                    </p>
+                    <div class="products_footer">
+                        <div class="products_price">
+                            {{ product.price }} ₽
                         </div>
-                        <a href="/">Комментарии</a>
+                        <div class="products_button">
+                            Купить
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
+            </div>
+            <div class="content">
+                <!-- <div class="products_wrapper"> -->
+                <!-- <div class="products_catalog"> -->
+                <div class="products">
+                    <img class="products_img" src="../media/{{ product.pictures }}" alt="Изображение">
+                    <p class="products_title">
+                        <a href="{{ product.id }}/product">{{ product.name }}</a>
+                    </p>
+                    <div class="products_footer">
+                        <div class="products_price">
+                            {{ product.price }} ₽
+                        </div>
+                        <div class="products_button">
+                            Купить
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 
+    <!-- </div> -->
+    <!-- </div> -->
+    </div>
+
     <footer class="footer">
         <div class="container">
-            footer
+            footer<div id="app">
+                {{ message }}
+            </div>
         </div>
     </footer>
-
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </body>
 
 
