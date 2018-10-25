@@ -1,0 +1,11 @@
+.mini_shopping_cart {
+  display: none;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 999;
+  width: 300px;
+  height: 100%;
+  box-shadow: inset 3px 0 9px 0 rgba(0, 0, 0, 0.12);
+  background-color: white;
+}
