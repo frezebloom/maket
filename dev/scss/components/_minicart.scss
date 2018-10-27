@@ -1,5 +1,5 @@
-.mini_shopping_cart {
-  display: none;
+.minicart {
+  margin-right: -300px;
   position: fixed;
   right: 0px;
   top: 0px;
@@ -8,4 +8,5 @@
   height: 100%;
   box-shadow: inset 3px 0 9px 0 rgba(0, 0, 0, 0.12);
   background-color: white;
+  transition: right 0.5s;
 }

@@ -4,9 +4,10 @@ const autoprefixer = require("gulp-autoprefixer");
 const cssnano = require("gulp-cssnano");
 const browserSync = require("browser-sync");
 const plumber = require("gulp-plumber");
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
+const babel = require("gulp-babel");
+const concat = require("gulp-concat");
 const minify = require("gulp-babel-minify");
+const browserify = require("browserify");
 
 gulp.task("scss", () => {
   return gulp
@@ -23,18 +24,23 @@ gulp.task("scss", () => {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task("scripts", () => 
-  gulp.src('dev/js/**/*.js')
-  .pipe(babel({
-      presets: ['@babel/env']
-  }))
-  .pipe(concat("scripts.js"))
-  .pipe(minify({
-    mangle: {
-      keepClassName: true
-    }
-  }))
-  .pipe(gulp.dest('dist/js'))
+gulp.task("scripts", () =>
+  gulp
+    .src("dev/js/**/*.js")
+    .pipe(
+      babel({
+        presets: ["@babel/env"]
+      })
+    )
+    .pipe(concat("scripts.js"))
+    .pipe(
+      minify({
+        mangle: {
+          keepClassName: true
+        }
+      })
+    )
+    .pipe(gulp.dest("dist/js"))
 );
 
 gulp.task("browser-sync", () => {
