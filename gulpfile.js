@@ -4,10 +4,12 @@ const autoprefixer = require("gulp-autoprefixer");
 const cssnano = require("gulp-cssnano");
 const browserSync = require("browser-sync");
 const plumber = require("gulp-plumber");
-const babel = require("gulp-babel");
-const concat = require("gulp-concat");
 const minify = require("gulp-babel-minify");
 const browserify = require("browserify");
+var source = require("vinyl-source-stream");
+var sourcemaps = require("gulp-sourcemaps");
+var buffer = require("vinyl-buffer");
+var babelify = require("babelify");
 
 gulp.task("scss", () => {
   return gulp
@@ -24,15 +26,21 @@ gulp.task("scss", () => {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task("scripts", () =>
-  gulp
-    .src("dev/js/**/*.js")
-    .pipe(
-      babel({
-        presets: ["@babel/env"]
-      })
-    )
-    .pipe(concat("scripts.js"))
+gulp.task("scripts", function() {
+  return browserify({
+    entries: "./dev/js/index.js",
+    extensions: [".js"],
+    debug: true
+  })
+    .transform(babelify, { presets: ["@babel/env"] })
+    .bundle()
+    .on("error", function(err) {
+      console.error(err);
+      this.emit("end");
+    })
+    .pipe(source("scripts.min.js"))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(
       minify({
         mangle: {
@@ -40,8 +48,9 @@ gulp.task("scripts", () =>
         }
       })
     )
-    .pipe(gulp.dest("dist/js"))
-);
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest("./dist/js"));
+});
 
 gulp.task("browser-sync", () => {
   browserSync({
