@@ -1,4 +1,4 @@
-class minicart {
+class Minicart {
   open() {
     const minicartPanel = document.querySelector(".minicart");
     const minicartButton = document.querySelector(".shopping_cart_button");
@@ -8,4 +8,4 @@ class minicart {
   }
 }
 
-export default minicart;
+export default Minicart;

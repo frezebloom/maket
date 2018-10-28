@@ -1,6 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
 
   .container {
@@ -9,25 +10,26 @@
       margin-left: $freeSpace;
       margin-top: -$freeSpace / 2;
       flex-wrap: wrap;
+      justify-content: space-between;
       margin-right: $freeSpace;
       margin-bottom: $freeSpace;
       min-height: 100px;
     }
+  }
 
-    /* Portrait tablets and small desktops */
-    @media (min-width: 768px) and (max-width: 991px) {
-      .container {
-        margin-right: 0;
-        margin-bottom: $freeSpace;
-      }
+  /* Portrait tablets and small desktops */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      margin-right: 0;
+      margin-bottom: $freeSpace;
     }
+  }
 
-    /* Landscape phones and portrait tablets */
-    @media (max-width: 767px) {
-      .container {
-        margin-right: 0;
-        margin-bottom: $freeSpace;
-      }
+  /* Landscape phones and portrait tablets */
+  @media (max-width: 767px) {
+    .container {
+      margin-right: 0;
+      margin-bottom: $freeSpace;
     }
   }
 
