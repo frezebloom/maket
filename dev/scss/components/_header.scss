@@ -9,14 +9,14 @@
   background-color: #364a5d;
   opacity: 0.9;
   z-index: 888;
-
+  white-space: nowrap;
   .container {
     height: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 0 $freeSpace 0 $freeSpace;
 
-    .wrapper_logo_contact-phone {
+    .header_wrapper {
       display: flex;
       align-items: center;
     }
@@ -29,7 +29,7 @@
       color: #f5f5f5;
     }
     .contact_phone {
-      margin-left: $freeSpace + 10;
+      margin-left: $freeSpace + 25;
       font-size: 16px;
       color: #d8d8d8;
       font-weight: bold;
@@ -93,10 +93,10 @@
     }
 
     .cart_link {
-      // background: #353c44;
+      background: #53687b;
       color: $whiteColor;
+      padding: $freeSpace - 2;
       font-size: 15px;
-      font-weight: 1000;
     }
 
     .shopping_cart_button img {
