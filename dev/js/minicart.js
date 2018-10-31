@@ -8,15 +8,15 @@ class Minicart {
     minicartButton.addEventListener("click", () => {
       if (!opened) {
         minicartPanel.style.marginRight = "0px";
-        for (let i = 0; i < container.length; i++) {
-          container[i].style.marginRight = "450px";
-        }
+        // for (let i = 0; i < container.length; i++) {
+        //   container[i].style.marginRight = "450px";
+        // }
         opened = true;
       } else {
         minicartPanel.style.marginRight = "-350px";
-        for (let i = 0; i < container.length; i++) {
-          container[i].style.marginRight = "0px";
-        }
+        // for (let i = 0; i < container.length; i++) {
+        //   container[i].style.marginRight = "0px";
+        // }
         opened = false;
       }
     });

@@ -93,10 +93,12 @@
     }
 
     .cart_link {
-      background: #53687b;
+      background-color: #495b6c;
       color: $whiteColor;
-      padding: $freeSpace - 2;
+      padding: $freeSpace - 1;
       font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
     }
 
     .shopping_cart_button img {
