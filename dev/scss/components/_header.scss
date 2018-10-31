@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  user-select: none;
   top: 0;
   width: 100%;
   display: flex;
@@ -98,6 +99,7 @@
       padding: $freeSpace - 1;
       font-size: 15px;
       font-weight: 600;
+
       cursor: pointer;
     }
 
