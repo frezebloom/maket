@@ -6,7 +6,7 @@
   justify-content: space-between;
   overflow: hidden;
   width: 30%;
-  min-width: 290px;
+  min-width: 220px;
   height: 300px;
   margin: $freeSpace / 2;
   background-color: #fafafa;
@@ -70,4 +70,29 @@
 
 .products_button:hover {
   background-color: #54b47e;
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .products {
+    width: 47%;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .products {
+    width: 47%;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .products {
+    width: 100%;
+  }
 }
