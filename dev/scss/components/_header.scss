@@ -7,7 +7,8 @@
   flex-direction: column;
   height: $headerHeight;
   font-size: 15px;
-  background-color: #2a3b4c;
+  background-color: #002a53;
+  opacity: 0.9;
   z-index: 888;
   white-space: nowrap;
   .container {
@@ -94,11 +95,11 @@
     }
 
     .cart_link {
-      background-color: #3e4e5d;
+      background-color: #003c72;
       color: $whiteColor;
       padding: $freeSpace - 1;
       font-size: 15px;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
     }
 
