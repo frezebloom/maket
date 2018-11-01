@@ -24,16 +24,16 @@
 }
 
 #navigation_active {
-  background: #3f9e65;
+  background: $greenColor;
   font-size: 15px;
   color: #ffffff;
-  border-right-color: #3f9e65;
+  border-right-color: $greenColor;
   padding-left: 35px;
   font-weight: 600;
   border-right-width: 4px;
 }
 
 .navigation li:hover {
-  border-right-color: #3f9e65;
+  border-right-color: $greenColor;
   border-right-width: 4px;
 }
